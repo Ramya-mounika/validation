@@ -1,0 +1,137 @@
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>Home</title>
+<style media="screen">
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ form{
+  border-radius: 20px;
+  width: 300px;
+  padding: 30px;
+  /* border: 2px solid lime; */
+  background-color: rgba(0,0,0,0.4);
+  box-shadow: 1px 1px 2px lime;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+body{
+  font-family: "Montserrat",sans-serif;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('pic.jpg');
+  background-size: 1600px 800px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  }
+
+  form h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    align-self: center;
+  }
+
+  form input[type="text"],
+  form input[type="password"]{
+    font-size: 20px;
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid ;
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    color: #fff;
+    border-radius: 24px;
+    transition: all .2s ease-in;
+  }
+  form input[type="text"]:focus,
+  form input[type="password"]:focus{
+      width: 250px;
+      border-color: #ffc400ec;
+  }
+  .username,
+  .password{
+    position: relative;
+  }
+
+  .fa-envelope,
+  .fa-lock-open{
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    color: rgba(256,256,256);
+  }
+
+  #btn{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #ffc400ec;
+    padding: 14px 35px;
+    font-size: 18px;
+    color: rgba(256,256,256);
+    border-radius: 20px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+  }
+  #btn:hover{
+    background-color: #ffc400ec;
+  }
+</style>
+  </head>
+  <body>
+<div class="wrapper">
+  <form>
+    <h1>Login</h1>
+    <!-- user input -->
+    <div class="username">
+      <input type="text" placeholder="Enter Username" id="username">
+      <i class="far fa-envelope"></i>
+    </div>
+    <!-- password input -->
+    <div class="password">
+      <input type="password" placeholder="Enter Password" id="password">
+      <i class="fas fa-lock-open"></i>
+    </div>
+    <!-- Button -->
+    <button type="submit" id="btn" onclick="validate()">Login</button>
+  </form>
+</div>
+
+      <!-- javascript code -->
+
+    <script type="text/javascript">
+      function validate(){
+          let username = document.getElementById("username").value;
+          let password = document.getElementById("password").value;
+      if (username == "Ramya" && password == "learn")
+      {
+        alert("Login successfuly!");
+      } else{
+        alert("Login failed");
+      }
+      }
+    </script>
+
+    <!-- //javascript code -->
+  </body>
+</html>
